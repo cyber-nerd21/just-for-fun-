@@ -36,17 +36,17 @@ export default function Flashcards() {
             ← Back
           </button>
           <h2 className="text-2xl font-bold text-center mb-8">{block?.title}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {block?.cards.map((card, i) => (
               <div
                 key={i}
                 onClick={() => setFlipped(flipped === i ? null : i)}
-                className="cursor-pointer bg-gray-800 hover:bg-gray-700 rounded-xl p-6 min-h-32 flex items-center justify-center text-center transition-all duration-300"
+                className="cursor-pointer bg-gray-800 hover:bg-gray-700 rounded-xl p-6 min-h-40 flex items-center justify-center text-center transition-all duration-300"
               >
                 {flipped === i ? (
-                  <p className="text-green-400 text-sm font-medium">{card.back}</p>
+                  <p className="text-green-400 text-sm font-medium whitespace-pre-line">{card.back}</p>
                 ) : (
-                  <p className="text-white font-bold">{card.front}</p>
+                  <p className="text-white font-bold text-lg">{card.front}</p>
                 )}
               </div>
             ))}
