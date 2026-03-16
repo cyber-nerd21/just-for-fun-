@@ -1,0 +1,55 @@
+export const blocks = [
+  {
+    id: 1,
+    title: "Block 1 — CNN Foundations",
+    cards: [
+      { front: "Output Size Formula", back: "(N + 2P - F) / S + 1" },
+      { front: "Parameter Count", back: "(F × F × C_in + 1) × num_filters" },
+      { front: "Valid Padding", back: "No padding — output shrinks" },
+      { front: "Same Padding", back: "Output size = Input size" },
+      { front: "Pooling Parameters", back: "Zero trainable parameters" },
+      { front: "Feature Map Depth", back: "Equals number of filters applied" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Block 2 — CNN Architectures",
+    cards: [
+      { front: "ResNet", back: "Skip connections — F(x) + x — Solves vanishing gradient" },
+      { front: "InceptionNet", back: "Parallel filters 1×1, 3×3, 5×5 — 1×1 for bottleneck" },
+      { front: "VGGNet", back: "Stacked 3×3 — Two 3×3 = one 5×5 receptive field" },
+      { front: "MobileNet", back: "Depthwise Separable Convolutions — lightweight mobile" },
+      { front: "ShuffleNet", back: "Channel Shuffling — ultra lightweight" },
+      { front: "EfficientNet", back: "Compound Scaling — Depth + Width + Resolution" },
+      { front: "AlexNet", back: "First ImageNet winner — ReLU + Dropout" },
+      { front: "LeNet", back: "OG CNN — digit recognition — 1998" },
+    ],
+  },
+  {
+    id: 3,
+    title: "Block 3 — Object Detection",
+    cards: [
+      { front: "IoU Formula", back: "Intersection / (Area1 + Area2 - Intersection)" },
+      { front: "Good Detection", back: "IoU > 0.5" },
+      { front: "YOLO Core Idea", back: "One forward pass — S×S grid — real time" },
+      { front: "Anchor Boxes", back: "Predefined shapes — not learned from scratch" },
+      { front: "NMS", back: "Non Max Suppression — removes duplicate detections" },
+      { front: "mAP", back: "Mean Average Precision — across all classes" },
+      { front: "Grid Cell Rule", back: "Detects object whose CENTER falls in it" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Block 4 — Segmentation",
+    cards: [
+      { front: "Semantic Segmentation", back: "Every pixel gets class label" },
+      { front: "Instance Segmentation", back: "Each object gets unique ID" },
+      { front: "Encoder", back: "Compresses image — extracts features" },
+      { front: "Decoder", back: "Reconstructs back to original size" },
+      { front: "Bottleneck", back: "Lowest resolution — purest feature representation" },
+      { front: "U-Net Skip Connections", back: "Preserves spatial info — encoder to decoder" },
+      { front: "U-Net Use Case", back: "Medical image segmentation" },
+      { front: "Segmentation Map", back: "Same spatial size as input image" },
+    ],
+  },
+];
